@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🟣 LumaIsland
+#  LumaIsland
 
 **A Dynamic Island experience for Windows — right at the top of your screen.**
 
@@ -58,8 +58,8 @@
 - Shows current month and selected date detail
 - Ready for future **Outlook / Google Calendar** sync
 
-### 💊 Collapsed Purple Pill
-- Minimal, glowing purple pill indicator when collapsed
+### 💊 Collapsed Pill
+- Minimal, black pill indicator when collapsed
 - Centered at the top of your primary screen
 - Subtle glow and gradient animation
 - Hover to smoothly expand into the full island
