@@ -132,7 +132,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/lumaIsland.git
+git clone https://github.com/SathvikGuttula/LumaIsland.git
 cd lumaIsland
 
 # Restore dependencies
