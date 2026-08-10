@@ -1,0 +1,109 @@
+<Window x:Class="LumaIsland.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LumaIsland Settings"
+        Width="760"
+        Height="560"
+        WindowStartupLocation="CenterOwner"
+        Background="#FF1B1B1F"
+        Foreground="White">
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="LumaIsland"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   Margin="4,0,0,16"/>
+
+        <TabControl Grid.Row="1" Background="#FF1B1B1F" BorderThickness="0">
+            <TabItem Header="General">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="18">
+                        <CheckBox x:Name="StartupCheck"
+                                  Content="Launch at startup"
+                                  Margin="0,0,0,12"
+                                  FontSize="15"/>
+
+                        <CheckBox x:Name="HoverExpandCheck"
+                                  Content="Expand on hover"
+                                  Margin="0,0,0,20"
+                                  FontSize="15"/>
+
+                        <TextBlock Text="Expanded width" FontSize="15" FontWeight="SemiBold"/>
+                        <Slider x:Name="ExpandedWidthSlider" Minimum="760" Maximum="1280" Margin="0,10,0,20"/>
+
+                        <TextBlock Text="Collapsed width" FontSize="15" FontWeight="SemiBold"/>
+                        <Slider x:Name="CollapsedWidthSlider" Minimum="70" Maximum="180" Margin="0,10,0,20"/>
+
+                        <TextBlock Text="Collapsed height" FontSize="15" FontWeight="SemiBold"/>
+                        <Slider x:Name="CollapsedHeightSlider" Minimum="14" Maximum="28" Margin="0,10,0,20"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Widgets">
+                <StackPanel Margin="18">
+                    <Border Background="#FF2563EB" CornerRadius="18" Padding="16" Margin="0,0,0,12">
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Left">
+                                <TextBlock Text="Media Player" FontSize="18" FontWeight="SemiBold"/>
+                                <TextBlock Text="Detect and display active media sessions." Foreground="#DDEAFE" Margin="0,4,0,0"/>
+                            </StackPanel>
+                            <CheckBox x:Name="MediaWidgetCheck"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Center"
+                                      Margin="20,0,0,0"/>
+                        </DockPanel>
+                    </Border>
+
+                    <Border Background="#FF374151" CornerRadius="18" Padding="16">
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Left">
+                                <TextBlock Text="Calendar" FontSize="18" FontWeight="SemiBold"/>
+                                <TextBlock Text="Show compact week and day selection in the island." Foreground="#D1D5DB" Margin="0,4,0,0"/>
+                            </StackPanel>
+                            <CheckBox x:Name="CalendarWidgetCheck"
+                                      HorizontalAlignment="Right"
+                                      VerticalAlignment="Center"
+                                      Margin="20,0,0,0"/>
+                        </DockPanel>
+                    </Border>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="About">
+                <StackPanel Margin="18">
+                    <TextBlock Text="Version 0.1 MVP" FontSize="18" FontWeight="SemiBold"/>
+                    <TextBlock Text="Windows desktop island overlay with media detection and a calendar." 
+                               Foreground="#FFA3A3A8"
+                               Margin="0,8,0,0"/>
+
+                    <TextBlock Text="Planned next: event sync, more widgets, notifications, custom themes."
+                               Foreground="#FFA3A3A8"
+                               Margin="0,8,0,0"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,18,0,0">
+            <Button Content="Cancel"
+                    Width="100"
+                    Height="36"
+                    Margin="0,0,10,0"
+                    Click="Cancel_Click"/>
+
+            <Button Content="Save"
+                    Width="100"
+                    Height="36"
+                    Background="#FF3B82F6"
+                    Foreground="White"
+                    BorderBrush="Transparent"
+                    Click="Save_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
